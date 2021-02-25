@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-6">
+        <h3>Modification voiture</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="carForm" (ngSubmit)="onSubmitForm()">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input id="name" class="form-control" type="text" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="door">Porte</label>
+            <input id="door" class="form-control" type="number" formControlName="door">
+          </div>
+          <button type="button" class="btn btn-primary" type="submit" [disabled]="carForm.invalid">Modifier</button>
+        </form>
+      </div>
+  </div>
